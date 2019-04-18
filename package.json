@@ -9,8 +9,9 @@
     "url": "https://github.com/julie-ng/azure-devops-acr-example"
   },
   "scripts": {
-		"start": "node app/app.js",
-		"lint": "eslint ."
+    "start": "node app/app.js",
+    "lint": "eslint .",
+    "release": "standard-version"
   },
   "dependencies": {
     "express": "^4.16.3",
