@@ -29,9 +29,9 @@ steps:
 - script: npm run lint
   displayName: Lint Code
 
-# -------------
-# Docker Steps
-# -------------
+# ----------------------------
+# Docker Image: Build and Push
+# ----------------------------
 
 - script: |
     echo '##vso[task.setvariable variable=buildSha]'$(git rev-parse --short HEAD)''
@@ -55,10 +55,13 @@ steps:
 - script: docker logout $(azureContainerRegistry)
   displayName: 'Docker: logout ACR'
 
-# Only deploy master branch if previous steps successful
+# ----------------------------
+# Deploy to Azure App Services
+# ----------------------------
+
 - task: AzureWebAppContainer@1
   displayName: Deploy container as Azure Web App
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master')) # (master branch and succesful builds only)
   inputs:
     appName: $(appName)
     azureSubscription: $(azureSubscriptionEndpoint)
