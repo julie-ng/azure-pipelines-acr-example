@@ -1,8 +1,8 @@
-# Azure Devops Example: Push images to Container Registry 
+# Azure Pipelines Example: Building and Deploying Containers
 
 [![Build Status](https://dev.azure.com/julie-ng/demos/_apis/build/status/julie-ng.azure-devops-acr-example?branchName=master)](https://dev.azure.com/julie-ng/demos/_build/latest?definitionId=3&branchName=master)
 
-This barebones repository shows how to automate building and pushing a Docker image and push to [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/).
+This barebones repository shows how to automate building and pushing a Docker image and push to [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR).
 
 This was not straightfoward from the documentation. I got it working after trial and error and have published my simplified example. I hope you find it useful.
 
