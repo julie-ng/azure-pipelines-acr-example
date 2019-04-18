@@ -10,7 +10,7 @@ variables:
   appName: azure-devops-acr-example
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'ubuntu-latest'
 
 steps:
 
