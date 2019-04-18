@@ -72,8 +72,17 @@ steps:
 
 See full [azure-pipelines.yml](./azure-pipelines.yml) file for details.
 
+## Deployment
+
+Before you deploy, you need to create the resource (e.g. first deploy) by hand. Otherwise you may see this error message:
+
+```
+##[error]Error: Resource 'azure-devops-acr-example' doesn't exist. Resource should exist before deployment.
+```
+
 ## References
 
 - [Azure Pipelines: Build, test, and push Docker container apps](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/docker?view=azure-devops)
 - [Azure Pipelines: Docker task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/docker?view=azure-devops)
-
+- [Azure Pipelines: Specify conditions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml)
+- [Azure Pipelines > Deploy Tasks: Azure Web App for Container task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-containers?view=azure-devops)

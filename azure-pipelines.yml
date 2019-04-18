@@ -7,6 +7,7 @@ variables:
   azureContainerRegistry: julie.azurecr.io
   registryName: $(azureContainerRegistry)/$(Build.Repository.Name)
   imageTag: $(registryName):$(Build.BuildId)
+  appName: azure-devops-acr-example
 
 pool:
   vmImage: 'Ubuntu-16.04'
@@ -53,3 +54,12 @@ steps:
 
 - script: docker logout $(azureContainerRegistry)
   displayName: 'Docker: logout ACR'
+
+# Only deploy master branch if previous steps successful
+- task: AzureWebAppContainer@1
+  displayName: Deploy container as Azure Web App
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  inputs:
+    appName: $(appName)
+    azureSubscription: $(azureSubscriptionEndpoint)
+    imageName: $(imageTag)-$(buildSha)

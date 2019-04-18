@@ -9,7 +9,7 @@ app.use(helmet())
 app.use(logger('dev'))
 
 app.get('/', (req, res) => {
-	res.send('Hello World!')
+	res.send('Hello World! V2')
 })
 
 app.use((req, res, next) => {
