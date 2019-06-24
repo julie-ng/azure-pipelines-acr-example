@@ -9,7 +9,7 @@ app.use(helmet())
 app.use(logger('dev'))
 
 app.get('/', (req, res) => {
-	res.send('Hello World! V2')
+	res.send('Hello World!')
 })
 
 app.get('/health', (req, res) => {
@@ -28,6 +28,11 @@ app.get('/health', (req, res) => {
 			}
 		}
 	}
+
+	// Azure specific variables
+	_addEnvVar(body, 'hostname', 'WEBSITE_HOSTNAME')
+	_addEnvVar(body, 'instanceId', 'WEBSITE_INSTANCE_ID')
+
 	res.json(body)
 })
 
@@ -38,3 +43,10 @@ app.use((req, res, next) => {
 app.listen(port, () => {
 	console.log(`App listening on port ${port}`)
 })
+
+
+function _addEnvVar (body, key, varname) {
+	if (process.env.hasOwnProperty(varname)) {
+		body[key] = process.env[varname]
+	}
+}
