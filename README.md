@@ -1,6 +1,6 @@
 # Azure Pipelines Example: Building and Deploying Containers
 
-[![Build Status](https://dev.azure.com/julie-ng/demos/_apis/build/status/julie-ng.azure-devops-acr-example?branchName=master)](https://dev.azure.com/julie-ng/demos/_build/latest?definitionId=3&branchName=master)
+[![Build Status](https://dev.azure.com/julie-ng/demos/_apis/build/status/julie-ng.azure-pipelines-acr-example?branchName=master)](https://dev.azure.com/julie-ng/demos/_build/latest?definitionId=4&branchName=master)
 
 This barebones repository shows how to automate building and pushing a Docker image and push to [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR).
 
