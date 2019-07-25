@@ -6,6 +6,12 @@ This barebones repository shows how to automate building and pushing a Docker im
 
 This was not straightfoward from the documentation. I got it working after trial and error and have published my simplified example. I hope you find it useful.
 
+### Demo
+
+This demo deploys an application to:
+
+- **[https://azure-devops-acr-example.azurewebsites.net/health &rarr;](https://azure-devops-acr-example.azurewebsites.net/health)**
+
 ## Secure Registry Login with "Service Connection"
 
 Instead of using `docker login`, we want to do a **secure login** by creating a [Service Connection using Azure Resource Manager](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops). This means we do not need a username or password in our environment.
