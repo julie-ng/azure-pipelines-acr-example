@@ -1,4 +1,9 @@
-# Azure Pipelines Example: Building and Deploying Containers
+# ⚠️ This demo is no longer maintained
+### ⚠️ Directions are kept for "how to" only. Please view [https://github.com/julie-ng/azure-nodejs-demo](https://github.com/julie-ng/azure-nodejs-demo) for an example Azure DevOps Pipeline.⚠️
+
+---
+
+### Azure Pipelines Example: Building and Deploying Containers
 
 [![Build Status](https://dev.azure.com/julie-io/demos/_apis/build/status/julie-ng.azure-pipelines-acr-example?branchName=master)](https://dev.azure.com/julie-io/demos/_build/latest?definitionId=1&branchName=master)
 
